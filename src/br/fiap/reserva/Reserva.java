@@ -21,12 +21,26 @@ public class Reserva {
 
     }
 
-    private void aplicarDesconto(double valorOriginal){
+      private void aplicarDesconto(double valorOriginal){
         if(cliente instanceof Desconto){
             Desconto desconto = (desconto) cliente;
         }
+        elese{
+            valorFinal = valorOriginal;
+        }
 
 
+    }
+    
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("#, ##0.00");
+        String aux = "";
+        aux += "Cliente: " + cliente.getNome() + "\n";
+        aux += "Assento: " + assento.getNumero() + "\n";
+        aux += "Valor Original: R$ " + valorOriginal + "\n";
+        aux += "Valor Final: R$ " + valorFinal + "\n";
+        return aux;
     }
 
 }
